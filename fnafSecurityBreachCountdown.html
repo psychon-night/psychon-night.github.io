@@ -1,5 +1,9 @@
 <!-- Display the countdown timer in an element -->
-<p id="demo"></p>
+<body style="background-color: black">
+  <center>    
+    <p id="demo" style="font-size: 40px; color: white; font-family:'Garamond'"></p>
+  </center>
+</body>
 
 <script>
 // Set the date we're counting down to
@@ -21,8 +25,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s until world-wide launch";
+  document.getElementById("demo").innerHTML = hours + ":"
+  + minutes + ":" + seconds + " until world-wide launch";
 
   // If the count down is finished, write some text
   if (distance < 0) {
