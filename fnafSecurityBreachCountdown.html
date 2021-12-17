@@ -1,38 +1,53 @@
 <!-- Display the countdown timer in an element -->
-<title>FNaF Security Breach Countdown</title>
+<title id="title">Loading...</title>
+<script src="/html/pynet/cdtrans.js"></script>
+
+<div style="display: none;">
+    <audio id="beep" src="/html/pynet/beep.mp3"></audio>
+</div>
+
+
+<button id="pulseBTTN" style="background-color: black; border: 3px solid darkgray; padding: 10px; color:gray; position:absolute; display:sticky;" onclick="disablePulseEffect()">Disable pulsing</button>
+
 <body style="background-color: black">
-  <center>    
-    <b><p id="demo" style="font-size: 65px; color: white; font-family:'Garamond'">Loading...</p></b>
+  <center>
+    <b><p id="demo" style="font-size: 65px; color: white; font-family:'Garamond'; padding-top: 20%">Loading...</p></b>
+    <b><p id="elapsed" style="font-size: 65px; color: white; font-family:'Garamond'"></p></b>
   </center>
 </body>
 
+<style>
+    @keyframes pulse {
+        0% {color: rgb(255, 0, 0)}
+        100% {color:pink}
+    }
+
+    @keyframes finishedPulse {
+        0% {color: lightseagreen}
+
+        100% {color: green}
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    body::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* Hide scrollbar for IE, Edge and Firefox */
+    body {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+}
+</style>
+
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Dec 16, 2021 18:00:00").getTime();
+var audio = document.getElementById("beep")
+
+tick()
 
 // Update the count down every 1 second
 var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = hours + ":"
-  + minutes + ":" + seconds + " until world-wide launch";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "Launched worldwide at 6:00 PM PST, December 16th 2021";
-  }
+    tick()
 }, 1000);
 </script>
