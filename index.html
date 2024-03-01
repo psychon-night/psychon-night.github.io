@@ -28,13 +28,29 @@
 		--sitewide-font-weight: 400;
 		--sitewide-font-size: 1.625em;
 	}
+
+	html {
+		overflow-y: scroll;
+		scrollbar-width: none; /* Firefox */
+		-ms-overflow-style: none;  /* Internet Explorer 10+ */
+	}
+	html::-webkit-scrollbar { /* WebKit */
+		width: 0;
+		height: 0;
+	}
+
+
 </style>
 
 <link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
 
 <noscript>
-<style>body {overflow: auto !important;}body:after {display: none !important;}#main > .inner {opacity: 1.0 !important;}#main {opacity: 1.0 !important;transform: none !important;transition: none !important;filter: none !important;}
+<style>
+	body {overflow: auto !important;}
+	body:after {display: none !important;}
+	#main > .inner {opacity: 1.0 !important;}
+	#main {opacity: 1.0 !important;transform: none !important;transition: none !important;filter: none !important;}
 </style>
 </noscript>
 </head>
