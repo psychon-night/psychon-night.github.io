@@ -1,0 +1,21 @@
+html {
+	--sitewide-font: "Anta", sans-serif;
+	--sitewide-font-weight: 400;
+	--sitewide-font-size: 1.625em;
+}
+
+html {
+	overflow-y: scroll;
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+html::-webkit-scrollbar { /* WebKit */
+	width: 0;
+	height: 0;
+}
+
+.nameDisplay {
+	background: linear-gradient(90deg, rgba(255,8,164,1) 0%, rgba(175,0,246,1) 100%);
+	background-clip: text;
+	color: transparent;
+}
