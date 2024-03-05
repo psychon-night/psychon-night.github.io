@@ -1353,11 +1353,20 @@ p.style4 span.p:nth-child(n + 2) {
 .image.style1 img {
 	border-radius: inherit !important;
 	padding: 0.75rem;
+	scale:1;
+	transition-duration: 1s!important;
 }
 
-.image.style1 .frame img {
-	transition: none;
+.image.style1:hover img:hover {
+	border-radius: inherit !important;
+	padding: 0.75rem;
+	scale:1.2;
+	transition-duration: 1s!important;
 }
+
+/* .image.style1 .frame img {
+	 transition: none; 
+} */
 
 @media (max-width: 1920px) {}
 
