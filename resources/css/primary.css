@@ -978,6 +978,17 @@ p.style1 {
 	font-weight: 500;
 }
 
+h1.noanim,
+h2.noanim,
+h3.noanim,
+p.noanim {
+	color: #FFFFFF;
+	font-family: var(--sitewide-font);
+	font-size: 3em;
+	line-height: 1.25;
+	font-weight: 500;
+}
+
 h1.style1 a,
 h2.style1 a,
 h3.style1 a,
