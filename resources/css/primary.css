@@ -1343,30 +1343,28 @@ p.style4 span.p:nth-child(n + 2) {
 
 .image.style1 .frame {
 	width: 100vw;
-	border-radius: 100%;
+	border-radius: 10%;
 	border-color: rgba(255, 255, 255, 0.071);
 	border-style: solid;
 	border-width: 2px;
-	transition: none;
+	transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.image.style1:hover .frame {
+	scale: 1.07
+}
+
+.image.style1:hover img {
+	scale:1.05;
+	transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .image.style1 img {
 	border-radius: inherit !important;
 	padding: 0.75rem;
 	scale:1;
-	transition-duration: 1s!important;
+	transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
 }
-
-.image.style1:hover img:hover {
-	border-radius: inherit !important;
-	padding: 0.75rem;
-	scale:1.2;
-	transition-duration: 1s!important;
-}
-
-/* .image.style1 .frame img {
-	 transition: none; 
-} */
 
 @media (max-width: 1920px) {}
 
