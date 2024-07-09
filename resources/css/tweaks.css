@@ -19,3 +19,8 @@ html::-webkit-scrollbar { /* WebKit */
 	background-clip: text;
 	color: transparent;
 }
+
+.linkHidden {
+	text-decoration: none!important;
+	color: rgba(255, 255, 255, 0.451)!important
+}
