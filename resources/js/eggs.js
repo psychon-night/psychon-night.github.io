@@ -9,4 +9,7 @@ function rambleyEgg() {
 	document.getElementById('rambleySwitch').innerHTML='Rambley the Raccoon'
 	document.getElementById('rambleySwitch').onclick=''
 	document.getElementById('rambleySwitch').style='cursor:text'
+	document.getElementById('rambleySwitch').title='You can\'t leave your new best friend, Rambley!'
+
+	document.getElementById('bottomQuote').innerHTML='"CONGRATULATIONS! You found ME! Don\'t I look adorable?" - <color style="color:rgb(90, 90, 90)">Rambley the Raccoon</color>'
 }
