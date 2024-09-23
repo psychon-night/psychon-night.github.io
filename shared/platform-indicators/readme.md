@@ -1,0 +1,1 @@
+Icons denotating platform support
